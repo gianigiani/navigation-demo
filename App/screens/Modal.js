@@ -1,18 +1,19 @@
 import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
+import navigation from "../config/navigation";
 
-export default () => (
+export default ({ navigation }) => (
   <View
     style={{
       flex: 1,
       backgroundColor: "transparent",
       alignItems: "center",
-      justifyContent: "center"
+      justifyContent: "center",
     }}
   >
     <TouchableOpacity
       style={{ backgroundColor: "white", padding: 20 }}
-      onPress={() => alert("todo!")}
+      onPress={() => navigation.pop()}
     >
       <Text>Modal me</Text>
     </TouchableOpacity>
